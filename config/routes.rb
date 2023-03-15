@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   # GET /about
   get "about" ,to:"about#index"
+  get "sign_up" , to:"registration#new"
+  post "sign_up" , to: "registration#create"
   get "/", to: "main#index"
 
 

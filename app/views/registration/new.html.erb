@@ -1,0 +1,19 @@
+<h1>Sign up</h1>
+<%= form_with model: @account ,url:sign_up_path do |form| %>
+<%= form.label :Email  %>
+<div class="mb-4">
+    
+    <%= form.text_field :mail ,class:"form_control" ,placeholder:"rahma@gmail.com"%>
+</div>
+<%= form.label :Password  %>
+<div class="mb-4">
+    <%= form.password_field :password ,class:"form_control" ,placeholder:"password"%>
+</div>
+<%= form.label :Confirme_password  %>
+<div class="mb-4">
+    <%= form.password_field :password_confirmation ,class:"form_control" ,placeholder:"confirme your password"%>
+</div>
+<div class="mb-4">
+    <%= form.submit "Sign up",class:"btn btn-primary"%>
+</div>
+<% end %>
