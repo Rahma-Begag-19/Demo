@@ -1,5 +1,5 @@
 <h1>Sign up</h1>
-<%= form_with model: @account ,url:sign_up_path do |form| %>
+<%= form_with model: @account ,url:sign_up_path ,data: { turbo: false }  do |form| %>
 <% if @account.errors.any? %>
  <div class="alert alert-danger">
     <% @account.errors.full_messages.each do |message|%>
