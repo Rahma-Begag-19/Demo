@@ -1,5 +1,12 @@
 <h1>Sign up</h1>
 <%= form_with model: @account ,url:sign_up_path do |form| %>
+<% if @account.errors.any? %>
+ <div class="alert alert-danger">
+    <% @account.errors.full_messages.each do |message|%>
+       <div class="mb-4"><%= message %></div>
+    <% end %>
+</div>
+<% end %>
 <%= form.label :Email  %>
 <div class="mb-4">
     
